@@ -1,0 +1,7 @@
+# Ignore WordPress theme files
+ultranet-security/
+ultranet-security.zip
+
+# System files
+.DS_Store
+Thumbs.db

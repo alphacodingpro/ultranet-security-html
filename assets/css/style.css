@@ -1,0 +1,175 @@
+/* 
+   Ultranet Security - Premium Custom Tech-Security Stylesheet
+   Developed for Ultranet Security, Pakistan
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --color-dark-obsidian: #030712;
+  --color-dark-bg: #070D1F;
+  --color-dark-card: rgba(13, 22, 47, 0.65);
+  --color-neon-cyan: #00F2FE;
+  --color-electric-blue: #3B82F6;
+  --color-deep-blue: #1E40AF;
+  --color-security-green: #10B981;
+  --color-neon-red: #EF4444;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-dark-obsidian);
+  color: #E2E8F0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark-obsidian);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-neon-cyan);
+  box-shadow: 0 0 10px var(--color-neon-cyan);
+}
+
+/* Premium Background Cyber Grid */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: center center;
+}
+
+/* Radial Glow Orbs */
+.glow-orb {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+.glow-orb-cyan {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, transparent 70%);
+}
+
+/* Modern Glassmorphism Cards */
+.glass-panel {
+  background: var(--color-dark-card);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-panel-hover:hover {
+  transform: translateY(-5px);
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.15);
+  background: rgba(13, 22, 47, 0.8);
+}
+
+/* CCTV Laser Scanning Line */
+.scanner-container {
+  position: relative;
+  overflow: hidden;
+}
+.scanner-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-neon-cyan), transparent);
+  animation: scan 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { top: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* Live Cam Recording Indicator */
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--color-neon-red);
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 10px var(--color-neon-red);
+  animation: pulse-red 1.5s infinite;
+}
+
+@keyframes pulse-red {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(239, 68, 68, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+}
+
+/* Custom Cyber Button */
+.btn-cyber {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+.btn-cyber::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.6s ease;
+  z-index: -1;
+}
+.btn-cyber:hover::before {
+  left: 100%;
+}
+
+/* Glow Borders on Focus/Hover */
+.neon-glow-cyan:hover {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+.neon-glow-blue:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+}
+
+/* Quick Utilities */
+.text-neon-cyan { color: var(--color-neon-cyan); }
+.text-security-green { color: var(--color-security-green); }
+.bg-dark-obsidian { background-color: var(--color-dark-obsidian); }
+.border-neon-cyan { border-color: rgba(6, 182, 212, 0.2); }
+
+/* Swiper Customize styling */
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+.swiper-pagination-bullet-active {
+  background: var(--color-neon-cyan) !important;
+  width: 24px !important;
+  border-radius: 4px !important;
+}
